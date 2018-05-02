@@ -1,0 +1,129 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table has a valid snapshot 1`] = `
+<div
+  className="table"
+>
+  <div
+    className="table-header"
+  >
+    <span
+      style={
+        Object {
+          "width": "40%",
+        }
+      }
+    >
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        Title
+      </button>
+    </span>
+    <span
+      style={
+        Object {
+          "width": "30%",
+        }
+      }
+    >
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        Author
+      </button>
+    </span>
+    <span
+      style={
+        Object {
+          "width": "10%",
+        }
+      }
+    >
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        Comments
+      </button>
+    </span>
+    <span
+      style={
+        Object {
+          "width": "10%",
+        }
+      }
+    >
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        Points
+      </button>
+    </span>
+    <span
+      style={
+        Object {
+          "width": "10%",
+        }
+      }
+    >
+      Archive
+    </span>
+  </div>
+  <div
+    className="table-row"
+  >
+    <span>
+      <a
+        href={undefined}
+      >
+        1
+      </a>
+    </span>
+    <span>
+      1
+    </span>
+    <span>
+      1
+    </span>
+    <span>
+      2
+    </span>
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Dismiss
+    </button>
+  </div>
+  <div
+    className="table-row"
+  >
+    <span>
+      <a
+        href={undefined}
+      >
+        2
+      </a>
+    </span>
+    <span>
+      2
+    </span>
+    <span>
+      1
+    </span>
+    <span>
+      2
+    </span>
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Dismiss
+    </button>
+  </div>
+</div>
+`;
