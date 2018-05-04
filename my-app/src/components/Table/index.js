@@ -1,7 +1,7 @@
 import { Button } from '../Button';
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {SORTS} from '../../constants';
+import {SORTS} from '../../constants/search';
 import './index.css';
 class Table extends Component {
 

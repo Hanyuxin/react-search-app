@@ -1,67 +1,68 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import App from '../App';
+import LandingPage from '../Landing';
+import SignUpPage from '../SignUp';
+import SignInPage from '../SignIn';
+import PasswordForgetPage from '../PasswordForget';
+// import HomePage from '../Home';
+import AccountPage from '../Account';
+import AboutPage from '../About';
+import * as routes from '../../constants/routes'
 
 const MyRoute = () => 
     <Router>
         <div>
             <ul>
                 <li>
-                    <Link to="/">Home</Link>
+                    <Link to={routes.SIGN_IN}>Sign In</Link>
                 </li>
                 <li>
-                    <Link to="/about">About</Link>
+                    <Link to={routes.LANDING}>Landing</Link>
+                </li>
+                <li>
+                    <Link to={routes.HOME}>Home</Link>
+                </li>
+                <li>
+                    <Link to={routes.ACCOUNT}>Account</Link>
+                </li>
+                <li>
+                    <Link to={routes.ABOUT}>About</Link>
                 </li>
             </ul>
-
+        
         <hr />
 
-        <Route exact path="/" component={App} />
-        <Route path="/about" component={About} />
+        <Route 
+            exact path={routes.LANDING}
+            component={() => <LandingPage />}
+        />
+        <Route
+            exact path={routes.ABOUT}
+            component={() => <AboutPage />}
+            />
+        <Route
+            exact path={routes.PASSWORD_FORGET}
+            component={() => <PasswordForgetPage />}
+            />
+        <Route
+            exact path={routes.HOME}
+            component={() => <App />}
+            />
+        <Route
+            exact path={routes.SIGN_IN}
+            component={() => <SignInPage />}
+            />
+        <Route
+            exact path={routes.SIGN_UP}
+            component={() => <SignUpPage />}
+            />
+        <Route
+            exact path={routes.ACCOUNT}
+            component={() => <AccountPage />}
+            />
     </div>
     </Router>
 
-
-const About = ({ match }) => 
-    <div>
-        <h2>this is a search app</h2>
-        <ul>
-            <li>
-                <Link to={`${match.url}/api`}>Api</Link>
-            </li>
-            <li>
-                <Link to={`${match.url}/ref`}>Refernce</Link>
-            </li>
-        </ul>
-
-        <Route path={`${match.url}/api`} component={Api} />
-        <Route path={`${match.url}/ref`} component={Reference} />
-        <Route
-            exact
-            path={match.url}
-            render={() => <h3>CopyRight: Yuxin</h3>}
-            />
-    </div>
-
-const Api = () => 
-    <div>
-        <h3>Hacker News API</h3>
-        <p> Hacker News platform is a great news aggregator about tech topics. 
-            we will use the Hacker News API to fetch trending stories from the platform.
-        </p>
-    </div>
-
-const Reference = () =>
-    <div>
-        <hr />
-        <ul>
-            <li>
-                <a href="https://github.com/facebook/create-react-app">create-react-api</a>
-            </li>
-            <li>
-            <a href="https://roadtoreact.com/">the-road-to-react</a>
-            </li>
-        </ul>
-    </div>
 
 export default MyRoute;
